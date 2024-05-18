@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<!-- write page and edit page -->
+<div>
+  <h1 class="tg cl">Write Your Venture.</h1>
+    <form class="px-3" action="/submit" method="POST">
+   
+    <label for="exampleFormControlTextarea1">TItle:</label>
+    <textarea name="title" class="form-control" id="exampleFormControlTextarea1"  rows="1" required><%=locals.title%></textarea>
+    <br>
+    
+    <label for="exampleFormControlTextarea1">Prompt:</label>
+    <textarea name="desc" class="form-control" id="exampleFormControlTextarea1"  rows="2" required> <%=locals.short%></textarea>
+    <br>
+    <label for="exampleFormControlTextarea1">Image Source:</label>
+    <textarea name="src" class="form-control" id="exampleFormControlTextarea1"  rows="1" required><%=locals.imgSrc %></textarea>
+    <br>
+    <label for="exampleFormControlTextarea1">Full Content:</label>
+    <textarea name="blog" class="form-control" id="exampleFormControlTextarea1"  rows="12" required><%=locals.paragraph %></textarea>
+    <br>
+    <input class="btn btn-outline-secondary" type="submit" value="submit">
+  </form>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

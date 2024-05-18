@@ -1,0 +1,134 @@
+<%- include("partials/header.ejs") %>
+
+      <!-- //content --> 
+      <div class="py-5">
+      <h1 class="tg ">Blog Spot</h1>
+      <p class="logo text-body-secondary ">Everyone has a story to tell!</p>
+      </div>
+      <div class="container-fluid">      
+
+        <div class="row"> 
+          <!-- photo and text that links to write page -->
+           <div class="container border-top border-bottom col-md-4 col-sm-12 py-4">
+            
+            <a href="/write" class="text-decoration-none">
+              <small class="text-body-secondary logo">Write</small>
+              <img src="/bitdark1.jpg" class="img-fluid w-100 rounded-5 "  style="height: 100%;" alt="Responsive image">
+            </a>
+          </div>
+          <div class="col-md-1">
+        <!--to give some space between the posts and photo  -->
+          </div>
+        <!--the posts   -->
+          <div class="border-top col-md-7 col-sm-12 py-4">
+            <small class="text-body-secondary logo ">Recent Posts</small>
+            <ul class="list-unstyled">
+              <!-- this fun will activate when user adds post  -->
+              <% if ( locals.s  == 0){ %> 
+                <li >
+                  <a  class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="/added">
+                    <img src="<%=locals.imgSrc%>" class="rounded bd-placeholder-img" width="100%" height="150"  alt="User inputted image">                  
+                    <div class="col-lg-8">
+                      <h6 class="pages" > <%=locals.title%> </h6>
+                      <small class="text-body-secondary pages"> <%=locals.short%> </small>
+                    </div>
+                  </a>
+                </li>
+                  <div class="row">
+                    <div class="col-sm-2">
+                    <form action="/edit" method="GET">
+                      <input class="btn btn-outline-secondary" type="submit" value="edit">
+                    </form>
+                   </div>
+                    <div class="col-sm-2">
+                    <form action="/delete" method="POST">
+                      <input class="btn btn-outline-secondary "  type="submit" value="delete">
+                    </form>
+                   </div>
+                </div>
+              <% }  %>  
+            <!-- list of posts -->
+              <li height="200">
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4  link-body-emphasis text-decoration-none border-top" href="/first">
+                  <img src="/alien.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="Responsive image">
+                  <div class="col-lg-8">
+                    <h6 class="pages">Alien Truth</h6>
+                    <small class="text-body-secondary pages">If there were intelligent beings elsewhere in the universe,
+                      they'd share certain truths in common with us. The truths of mathematics would be the same,
+                        because they're true by definition. Ditto for the truths of physics; the mass of a carbon atom would be the same on their planet. 
+                      But I think we'd share other truths with alien.... </small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4 link-body-emphasis text-decoration-none border-top" href="/second">
+                  <img src="/money.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="image of money">
+                  <div class="col-lg-8">
+                    <h6 class="pages">How People Get Rich Now</h6>
+                    <small class="text-body-secondary pages">Every year since 1982, Forbes magazine has published a list of the richest Americans.
+                      If we compare the 100 richest people in 1982 to the 100 richest in 2020, we notice some big differences....</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4 link-body-emphasis text-decoration-none border-top" href="/third">
+                  <img src="/writing.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="image that says write without fear edit without mercy. ">
+                  <div class="col-lg-8">
+                    <h6 class="pages">How to Write Usefully</h6>
+                    <small class="text-body-secondary pages">What should an essay be? Many people would say persuasive. 
+                      That's what a lot of us were taught essays should be.
+                      But I think we can aim for something more ambitious: that an essay should be useful....</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4 link-body-emphasis text-decoration-none border-top" href="/fourth">
+                  <img src="/yolo.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="Image that says you said tommorrow yesterday. ">
+                  <div class="col-lg-8">
+                    <h6 class="pages">Life Is Short</h6>
+                    <small class="text-body-secondary pages">Life is short, as everyone knows. When I was a kid I used to wonder about this. 
+                      Is life actually short, or are we really complaining about its finiteness? 
+                      Would we be just as likely to feel life was short if we lived 10 times as long?
+                    </small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4 link-body-emphasis text-decoration-none border-top" href="/fifth">
+                  <img src="/kids.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="image of legs of parents and a kid">
+                  <div class="col-lg-8">
+                    <h6 class="pages">Lies We Tell Kids</h6>
+                    <small class="text-body-secondary pages">Adults lie constantly to kids. I'm not saying we should stop, but I think we should 
+                      at least examine which lies we tell and why....</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4 link-body-emphasis text-decoration-none border-top" href="/sixth">
+                  <img src="/dying.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="image of dying flower">
+                  <div class="col-lg-8">
+                    <h6 class="pages">How Not To Die</h6>
+                    <small class="text-body-secondary pages">A couple days ago I told a reporter that we expected about a third of 
+                      the companies we funded to succeed. Actually I was being conservative. 
+                      I'm hoping it might be as much as a half. Wouldn't it be amazing if we could achieve a 50% success rate?</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-4 link-body-emphasis text-decoration-none border-top" href="/seventh">
+                  <img src="/mean.jpg" class="rounded bd-placeholder-img" width="100%" height="150"  alt="image that says don't be mean">
+                  <div class="col-lg-8">
+                    <h6 class="pages">Mean People Fail</h6>
+                    <small class="text-body-secondary pages">It struck me recently how few of the most successful people I know are mean.
+                      There are exceptions, but remarkably few. Meanness isn't rare. In fact, one of the things the internet has shown 
+                      us is how mean people can be. A few decades ago, only ....</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        
+        </div>
+      </div>
+      <%- include("partials/footer.ejs") %>
