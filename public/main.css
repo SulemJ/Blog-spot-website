@@ -41,18 +41,18 @@ body {
     padding-bottom: 3px;
 }
 /* to make the footer and header fixed check after coloring */
-footer{ 
+@media (min-width : 481px) {footer{ 
     position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-  }
-header{
+  }}
+  @media (min-width : 481px) {header{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-}
+}}
 .adr{
     font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif ;
     font-size: 20px;
