@@ -20,7 +20,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
  var logger = function (req, res, next){
-    console.log(req.body);
      submittedTitle = req.body["title"] ;
      submittedText =     req.body["blog"];
      submittedShort = req.body["desc"];

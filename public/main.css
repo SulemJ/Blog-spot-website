@@ -3,10 +3,13 @@
     font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif ;
    
 }
+body{
+    background-color: #ececeb;
+}
 .cl{
  color: #cda9b1;
 }
-body {
+main {
     margin-bottom: 100px;
     margin-top: 100px;
     background-color: #ececeb;
@@ -29,12 +32,13 @@ body {
 }
 .logo{
     font-family: Cambria, "Times New Roman", Times, serif;
-    font-size: 75px;
+    font-size: 95px;
     font-weight: 300;
 }
 .nav{
     --bs-nav-link-color: black;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
 }
 .contact{
     list-style: none;
@@ -46,13 +50,58 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-  }}
-  @media (min-width : 481px) {header{
+  }#header{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-}}
+}
+.space{
+    padding-bottom: 1.5rem ;
+    padding-top: 1.5rem ;
+}
+.img-fluid{
+    height: 95%;
+}
+}
+
+@media (max-width : 480px) {
+        #header{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    main{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .logo {
+        font-family: Cambria, "Times New Roman", Times, serif;
+        font-size: 45px;
+        font-weight: 300;
+    }
+    .display {
+        display: none;
+      }
+      .space{
+        padding-bottom: 0px ;
+        padding-top: 0px ;
+    }
+    .img-fluid{
+        height: 330px;
+    }
+    .fs{
+        font-size: 30px;
+        font-weight: 900;
+        
+    }
+    .adr{
+        font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif ;
+        font-size: 10px;
+    }
+    .title{
+        font-size: 35px;
+    }
+}
 .adr{
     font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif ;
     font-size: 20px;
