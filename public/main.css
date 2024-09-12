@@ -29,6 +29,7 @@ main {
     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 85px;
     font-weight: 400;
+    padding-top: 25px;
 }
 .logo{
     font-family: Cambria, "Times New Roman", Times, serif;
