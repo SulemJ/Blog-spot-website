@@ -10,11 +10,18 @@
   "author": "sulem",
   "license": "ISC",
   "dependencies": {
+    "@vercel/postgres": "^0.10.0",
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "morgan": "^1.10.0"
+    "express-session": "^1.18.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.13.0"
   }
 }

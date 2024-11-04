@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+<!-- this page manages blogs -->
+<div class="contaier fluid">
+  <small class="text-body-secondary logo ">Your Posts</small>
+  <% for(let item of locals.listItems) { %> 
+    <div class="border-top col-md-7 col-sm-12 py-4">
+      <ul class="list-unstyled">
+        <li>
+          <form action="/added" method="POST"> 
+          <input type="hidden" name="ItemId" value="<%= item.id %>">
+          <button type="submit" class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" 
+            style="background: none; border: none; padding: 0; cursor: pointer;">
+            <img src="<%= item.src %>" class="rounded bd-placeholder-img" width="100%" height="150" alt="User inputted image">                  
+            <div class="col-lg-8">
+              <h6 class="pages"> <%= item.title %> </h6>
+              <small class="text-body-secondary pages"> <%= item.prompt %> </small>
+            </div>
+          </button>
+          </form>
+          <div class="row">
+            <div class="col-sm-2">
+              <form action="/edit" method="post">
+                <input type="hidden" name="ItemId" value="<%= item.id %>">
+                <input class="btn btn-outline-secondary" type="submit" value="edit">
+              </form>
+            </div>
+            <div class="col-sm-2">
+              <form action="/delete" method="post">
+                <input type="hidden" name="ItemId" value="<%= item.id %>">
+                <input class="btn btn-outline-secondary "  type="submit" value="delete">
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div> 
+  <% }  %>  
+</div>
+  
+ <%- include("partials/footer.ejs") %>

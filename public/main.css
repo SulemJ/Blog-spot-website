@@ -67,6 +67,13 @@ main {
 }
 }
 
+
+@media (735px <= width <= 1180px) {
+    .or{
+        display: none;
+    }
+}
+
 @media (max-width : 480px) {
         #header{
         margin-bottom: 0px;
